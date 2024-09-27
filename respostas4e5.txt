@@ -1,0 +1,62 @@
+4) Descubra a lógica e complete o próximo elemento:
+ a) 1, 3, 5, 7, ___
+    Resposta: numeroAnterior + 2 = numeroSeguinte; 
+    Por exemplo 1 + 2 = 3, 3 + 2 = 5, 7 + 2 = 9
+    Portanto o próximo número é 9.
+
+ b) 2, 4, 8, 16, 32, 64, ____
+    Resposta: numeroAtual * 2 = numeroSeguinte; 
+    Por exemplo 2 * 2 = 4; 4 * 2 = 8; 64 * 2 = 128
+    Portanto o próximo número é 128.
+
+ c) 0, 1, 4, 9, 16, 25, 36, ____
+    A cada distancia entre o elemento anterior e o atual se soma + 2.
+    Do 1 para o 4 somamos 3,
+    do 4 para o 9 somamos 5
+    do 9 para 16 somamos 7
+    do 16 para o 25 somamos 9
+    do 25 para o 36 somamos 11
+    Se a cada novo numero é adicionado +2 na soma então de 36 para o proximo número temos que somar 11 + 2 que será 13, portanto o próximo número será 49.
+ 
+ d) 4, 16, 36, 64, ____
+    Do 4 para o 16 somamos 12,
+    Do 16 para o 36 somamos 20,
+    Do 36 para o 64 somamos 28
+    Se a cada novo número é somado +8 na soma então de 64 para o próximo número temos que somar 28 + 8 que será 36, portanto o próximo número é 100.
+
+e) 1, 1, 2, 3, 5, 8, ____
+   Essa é a sequência de Fibonnaci, a soma dos dois números anteriores é o valor do número seguinte.
+   1 - 2 = 3, 
+   3 + 5 = 8, 
+   5 + 8 = 13
+   Portanto a o próximo número será 13.
+   
+f) 2, 10, 12, 16, 17, 18, 19, ____ 
+   Eu não descobri a princípio a solução desse, estava pensando num padrão numérico, mas na verdade depois de muito tempo vi que todos os números começam com a letra D. Portanto a resposta seria 200(duzentos).
+ 
+
+5) Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em salas diferentes. Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada. Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?
+
+Resposta: 
+
+As lâmpadas são de led ou incandescentes? 
+
+Caso sejam de LED:
+Se eu desligar o interruptor A e deixar ligado os outros 2, vou para a sala 1 e verifico.
+Se estiver desligada:
+    Eu sei que o interruptor A liga a sala 1
+    Eu sei que o interruptor B liga a sala 2 ou 3
+    Eu sei que o interruptor C liga a sala 2 ou 3
+
+    Desligo o interruptor A e B e vou para a sala 2:
+    Se ela estiver ligada: 
+        Eu sei que o interruptor C é o que liga a sala 2
+        Eu sei que o interruptor B é o que liga a sala 3
+
+
+
+Caso sejam incandescentes eu posso ligar o interruptor A e deixá-lo ligado alguns minutos. A lâmpada vai ficar quente. Depois vou desligar o interruptor A e ligar o interruptor B.
+
+IDA
+Posso chegar lá e a lâmpada estar acesa, então seria o interruptor B. Se estiver apagada, mas quente então essa é o interruptor A. Se estiver apagada e fria é o interruptor C. Repito o processo na segunda ida e descubro os 3 interruptores assim.
+
